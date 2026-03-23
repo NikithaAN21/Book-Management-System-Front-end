@@ -1,0 +1,165 @@
+/* ===== BODY BACKGROUND ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  position: relative;
+  height: 100vh;
+}
+
+/* 🔥 Blurred Background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("./assets/f1fc12b9192442359a8ceb82ba207628.jpg");
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(3px) brightness(1);
+  z-index: -2;
+}
+
+/* 🔥 Overlay */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 25px;
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
+h2 {
+  background: linear-gradient(135deg, #2c5d8a, #4a7db8);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* ===== FORM ===== */
+.form {
+  margin: 20px 0;
+}
+
+.form input {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form input:focus {
+  border-color: #2c5d8a;
+  box-shadow: 0 0 5px rgba(44,93,138,0.5);
+}
+
+/* ===== BUTTON ===== */
+.form button {
+  background: linear-gradient(135deg, #2c5d8a, #4a7db8);
+  color: white;
+  border-radius: 8px;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(44,93,138,0.4);
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: linear-gradient(135deg, #2c5d8a, #4a7db8);
+  color: white;
+}
+
+td, th {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+tr:hover {
+  background: rgba(44,93,138,0.1);
+}
+
+/* ===== ACTION BUTTONS ===== */
+button {
+  margin: 3px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* View */
+button:nth-child(1) {
+  background: #6c757d;
+  color: white;
+}
+
+/* Edit */
+button:nth-child(2) {
+  background: #007bff;
+  color: white;
+}
+
+/* Delete */
+button:nth-child(3) {
+  background: #dc3545;
+  color: white;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  margin: 100px auto;
+  width: 350px;
+  border-radius: 12px;
+  text-align: left;
+}
